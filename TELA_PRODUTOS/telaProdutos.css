@@ -1,0 +1,365 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;   
+    text-decoration: none;
+}
+
+body {
+    background: url('/TELA_PRODUTOS/imgProdutos/D_NQ_NP_802508-MLB76065083294_052024-O.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #030303;
+    color: white;
+    border-radius: 0px 0px 20px 20px;
+    position: fixed; /* Fixa o cabeçalho no topo */
+    top: 0;
+    width: 100%;
+    height: 10%;
+    padding: 5px;
+    z-index: 10; /* Certifica-se de que o cabeçalho fique acima de outros conteúdos */
+}
+
+main {
+    background-repeat: no-repeat;
+    padding-top: 40px; /* Ajusta o padding para criar espaço para o cabeçalho fixo */
+    height: 100%;
+    /* Adiciona overflow-y para permitir que o conteúdo seja rolado quando excede a altura da viewport */
+    overflow-y: auto;
+    z-index: 1; /* Define a pilha de z-index para o conteúdo da página */
+    position: relative; /* Garante que o posicionamento seja relativo */
+}
+
+.lista-midias-sociais {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-midia-social-header {
+    margin-right: 1px;
+}
+
+.midias-sociais-header {
+    margin: 1rem 0;
+}
+
+.link-midia-social-header:not(:first-child) {
+    margin-left: 2px;
+}
+
+.link-midia-social-header .item-midia-social-header {
+    transition: background-color .5s;
+}
+
+.link-midia-social-header:hover .item-midia-social-header {
+    background-color: #abc2bc;
+    color: #fff;
+    border-color: #abc2bc;
+}
+
+.lista-midias-sociais-header {
+    display: flex;
+    list-style-type: none;
+}
+
+.item-midia-social-header {
+    margin-right: 15px;
+    border: 1px solid #e5e6e6;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #eaeff0;
+}
+
+h1 {
+    padding: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px;
+    gap:15px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajusta a posição abaixo do ícone */
+    right: 10px;
+    background-color: rgb(11, 11, 11);
+    border: 1px solid #a2a1a1;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    border-radius: 8px;
+}
+
+.menu a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fefefe;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    background-color: #ececec;
+    color: #000;
+    
+}
+
+.menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.painelVenda {
+    display: block;
+    justify-content: space-around;
+    background: linear-gradient(to right, #ffffff, #d6dcde, #d2cfcf);
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-top: 0; /* Ajusta o espaço entre o cabeçalho e a seção */
+    gap: 0px;
+    align-items: center;
+}
+
+.painelVenda h2 {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'a Attack Graffiti', sans-serif;
+}
+
+.containerProdutos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria uma grade responsiva que ajusta o número de colunas com base na tela */
+    grid-gap: 20px;
+    padding: 50px;
+    margin: 10px;
+    width: 100%;
+    height: auto; /* Permite que a altura seja ajustada com base no conteúdo */
+}
+
+.selectsContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Estilo para a caixa de seleção de tamanhos */
+.selectTamanho {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 2; /* Tamanho maior */
+    margin-right: 10px;
+}
+
+.selectTamanho:focus {
+    border-color: #aaa; /* Cor da borda ao focar */
+    outline: none; /* Remove o outline padrão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ao focar */
+}
+
+.selectTamanho:hover {
+    border-color: #bbb; /* Cor da borda ao passar o mouse */
+}
+
+.selectQuantidade {
+  
+    padding: 5px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.produtos {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    width: 100%; /* Ajusta a largura do cartão para ocupar o espaço da coluna */
+    height: auto; /* Ajusta a altura do cartão com base no conteúdo */
+    border-radius: 10px;
+}
+
+
+.produtos h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.produtos .preco {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.produtos .botaoSkatesComprar {
+    background-color: #333; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
+    display: inline-block; /* Exibição em linha */
+    font-size: 16px; /* Tamanho da fonte */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 20px
+}
+
+.produtos .botaoSkatesComprar:hover {
+    background-color: #555; /* Cor de fundo ao passar o mouse */
+    transform: translateY(-2px); /* Animação de elevação */
+}
+
+.produtos .botaoSkatesComprar:focus {
+    outline: none; /* Remove o outline padrão */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ao focar */
+}
+
+.produtos:hover {
+    /* Animação ao passar o mouse sobre o cartão do produto */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tamanhos {
+    /* Estilo da classe tamanhos */
+    margin-bottom: 20px;
+}
+
+.fim {
+    /* Estilo do rodapé */
+    background-color: #5b6265;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+footer {
+    /* Posicionamento e estilo do rodapé */
+    background-color: transparent;
+    color: #fff;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative; /* Posiciona o rodapé em relação ao seu container */
+    bottom: 0; /* Posiciona o rodapé na parte inferior da página */
+    width: 100%; /* Garante que o rodapé ocupe toda a largura */
+    z-index: 1; /* Garante que o rodapé fique acima do conteúdo */
+}
+
+.lista-midias-sociais {
+    /* Estilo da lista de mídias sociais */
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item-midia-social {
+    /* Estilo dos itens da lista de mídias sociais */
+    margin-right: 1px;
+}
+
+.midias-sociais {
+    /* Estilo da classe midias-sociais */
+    margin: 1rem 0;
+}
+
+.link-midia-social:not(:first-child) {
+    /* Estilo dos links de mídias sociais */
+    margin-left: 10px;
+}
+
+.link-midia-social.item-midia-social {
+    /* Animação ao passar o mouse sobre o item da mídia social */
+    transition: background-color.5s;
+}
+
+.link-midia-social:hover.item-midia-social {
+    /* Estilo do item da mídia social ao passar o mouse */
+    background-color: #abc2bc;
+    color: #fff;
+    border-color: #abc2bc;
+}
+
+.lista-midias-sociais {
+    /* Estilo da lista de mídias sociais */
+    display: flex;
+    list-style-type: none;
+}
+
+.item-midia-social {
+    /* Estilo dos itens da lista de mídias sociais */
+    border: 1px solid #e5e6e6;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #eaeff0;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+    .containerProdutos {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 colunas em telas menores */
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 768px) { 
+    .containerProdutos {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 colunas em telas menores */
+        grid-gap: 10px;
+    }
+
+    .produtos img {
+        max-height: 150px;
+    }
+
+    .produtos .botaoSkatesComprar {
+        padding: 8px 15px; /* Reduz o padding do botão */
+    }
+}
+
+@media (max-width: 480px) {
+    .containerProdutos {
+        grid-template-columns: 1fr; /* Empilha os cartões verticalmente */
+    }
+
+    .produtos {
+        width: 100%; /* Ajusta a largura do cartão para ocupar todo o espaço disponível */
+    }
+}

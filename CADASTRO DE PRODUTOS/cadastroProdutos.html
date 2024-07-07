@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+    <link rel="stylesheet" href="cadastroProdutos.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link href='https://unpkg.com/css.gg@2.0.0/icons/css/instagram.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+</head>
+<body>
+    <header>
+        <h1><a href="/TELA_PRINCIPAL/SKATE.html"><img src="/TELA_CARRINHO/img/Group 13.png" alt="Logo" width="270"></a></h1>
+         <nav>
+            <div class="midias-sociais-header">
+                <ul class="lista-midias-sociais-header">
+                    <a class="link-midia-social-header" href="/TELA_PRINCIPAL/SKATE.html">
+                        <li class="item-midia-social-header">
+                            <i class="fa fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a class="link-midia-social-header" href="/LOGIN/tela_login.html">
+                        <li class="item-midia-social-header">
+                            <i class="fa-solid fa-user"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="card">
+                <h2>Bem-vindo, <span id="adminName"></span></h2>
+                <p>Email: <span id="adminEmail"></span></p>
+                <button id="btnCadastrarProdutos">Cadastrar Produtos</button>
+                <form id="formCadastro" class="hidden">
+                    <input type="text" id="descricao" placeholder="Descrição do produto" required>
+                    <input type="number" id="valor" placeholder="Valor" step="0.01" required>
+                    <input type="text" id="url_img" placeholder="URL da imagem" required>
+                    <button type="submit">Finalizar Cadastrar</button>
+                </form>
+              
+            </div>
+        </section>
+
+        <section class="carrinho">
+            <h2>Produtos Cadastrados</h2>
+            <div class="container"></div>
+        </section>
+    </main>
+
+     <!-- Modal de Edição -->
+     <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Editar Produto</h2>
+            <form id="formEditar">
+                <input type="text" id="editDescricao" placeholder="Descrição do produto" required>
+                <input type="number" id="editValor" placeholder="Valor" step="0.01" required>
+                <input type="text" id="editUrlImg" placeholder="URL da imagem" required>
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+    </div>
+
+   
+    <script src="scriptCadastroProdutos.js"></script>
+</body>
+</html>
