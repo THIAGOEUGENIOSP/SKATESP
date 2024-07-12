@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "name": "landing-page",
   "builds": [
     {
       "src": "app/serve.js",
@@ -12,8 +13,36 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/public/$1"
+      "src": "/",
+      "dest": "/public/SKATE.html"
+    },
+    {
+      "src": "/TELA_PRINCIPAL/css/(.*)",
+      "dest": "/public/TELA_PRINCIPAL/css/$1"
+    },
+    {
+      "src": "/TELA_PRINCIPAL/img/(.*)",
+      "dest": "/public/TELA_PRINCIPAL/img/$1"
+    },
+    {
+      "src": "/TELA_PRODUTOS/telaProdutos.html",
+      "dest": "/public/TELA_PRODUTOS/telaProdutos.html"
+    },
+    {
+      "src": "/TELA_TENIS/tela_tenis.html",
+      "dest": "/public/TELA_TENIS/tela_tenis.html"
+    },
+    {
+      "src": "/TELA_ROUPAS/roupas.html",
+      "dest": "/public/TELA_ROUPAS/roupas.html"
+    },
+    {
+      "src": "/LOGIN/tela_login.html",
+      "dest": "/public/LOGIN/tela_login.html"
+    },
+    {
+      "src": "/TELA_CARRINHO/carrinho.html",
+      "dest": "/public/TELA_CARRINHO/carrinho.html"
     },
     {
       "src": "/api/(.*)",
