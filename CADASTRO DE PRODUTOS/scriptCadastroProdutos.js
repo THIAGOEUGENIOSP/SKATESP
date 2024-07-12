@@ -227,6 +227,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const modal = document.getElementById('editModal');
         modal.style.display = 'block';
 
+        document.getElementById('editId').textContent = produtoId; 
         document.getElementById('editDescricao').value = produto.descricao || '';
         document.getElementById('editValor').value = produto.valor || '';
         document.getElementById('editUrlImg').value = produto.url_img || '';
