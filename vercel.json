@@ -1,73 +1,23 @@
 {
-    "version": 2,
-    "name": "landing-page",
-    "builds": [
-      {
-        "src": "SKATE.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "TELA_PRINCIPAL/css/style.css",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "TELA_PRINCIPAL/img/*",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "TELA_PRODUTOS/telaProdutos.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "TELA_TENIS/tela_tenis.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "TELA_ROUPAS/roupas.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "LOGIN/tela_login.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "TELA_CARRINHO/carrinho.html",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/",
-        "dest": "/SKATE.html"
-      },
-      {
-        "src": "/TELA_PRINCIPAL/css/style.css",
-        "dest": "/TELA_PRINCIPAL/css/style.css"
-      },
-      {
-        "src": "/TELA_PRINCIPAL/img/(.*)",
-        "dest": "/TELA_PRINCIPAL/img/$1"
-      },
-      {
-        "src": "/TELA_PRODUTOS/telaProdutos.html",
-        "dest": "/TELA_PRODUTOS/telaProdutos.html"
-      },
-      {
-        "src": "/TELA_TENIS/tela_tenis.html",
-        "dest": "/TELA_TENIS/tela_tenis.html"
-      },
-      {
-        "src": "/TELA_ROUPAS/roupas.html",
-        "dest": "/TELA_ROUPAS/roupas.html"
-      },
-      {
-        "src": "/LOGIN/tela_login.html",
-        "dest": "/LOGIN/tela_login.html"
-      },
-      {
-        "src": "/TELA_CARRINHO/carrinho.html",
-        "dest": "/TELA_CARRINHO/carrinho.html"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "app/serve.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/app/serve.js"
+    }
+  ]
+}

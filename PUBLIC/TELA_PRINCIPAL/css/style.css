@@ -309,7 +309,7 @@ main{
 
 
 .rodape {
-    background-image: url(/TELA_PRINCIPAL/img/bg-newletter-acceptbox.png);
+    background-image: url(/PUBLIC/TELA_PRINCIPAL/img/bg-newletter-acceptbox.png);
     background-repeat: no-repeat !important;
     background-size: cover !important;
     padding: 6em 0;
