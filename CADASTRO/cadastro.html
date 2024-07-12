@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadstro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="imagem">
+        <img src="/CADASTRO/img/rua_sp_skt.png" alt="">
+    </div>
+    <div class="login-box">
+        <img src="img/SKATE BOARD..svg" alt="" width="300" srcset=""><br><br>
+        <strong class="descricao descricao-secundaria">
+            <h2>Login Administrador:</h2><br>
+        </strong>
+        <form class="formulario" id="adminLoginForm">
+            <label class="rotulo-input" for="">
+                <i class="far fa-envelope"></i>
+                <input type="email" name="adminEmail" placeholder="Email" required>
+            </label>
+            <label class="rotulo-input" for="">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="adminPassword" placeholder="Senha" required>
+            </label>
+            <button class="btn btn-secundario" id="adminLoginBtn" type="submit">Login</button>
+            <div id="adminMessageContainer"></div>
+        </form>
+        <button class="btn btn-secundario" id="newAdminBtn">Novo Administrador</button>
+        <div id="newAdminFields" style="display: none;">
+            <strong class="descricao descricao-secundaria">
+                <h2>Criar Conta Administrador:</h2><br>
+            </strong>
+            <form class="formulario" id="adminRegisterForm">
+                <label class="rotulo-input" for="">
+                    <i class="far fa-user icone-modificar"></i>
+                    <input type="text" name="nome" placeholder="Nome" required>
+                </label>
+                <label class="rotulo-input" for="">
+                    <i class="far fa-envelope"></i>
+                    <input type="email" name="email" placeholder="Email" required>
+                </label>
+                <label class="rotulo-input" for="">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                </label>
+                <label class="rotulo-input" for="">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" name="confirmarSenha" placeholder="Confirmação de senha" required>
+                </label>
+                <button class="btn btn-secundario" id="adminRegisterBtn" type="submit">Cadastrar</button>
+                <div id="registerMessageContainer"></div>
+            </form>
+        </div>
+    </div>
+    <script src="scriptCadastro.js"></script>
+</body>
+
+
+</html>
