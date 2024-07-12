@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 sessionStorage.setItem('adminEmail', result.adminEmail);
                 console.log('adminName salvo no sessionStorage:', sessionStorage.getItem('adminName'));
                 console.log('adminEmail salvo no sessionStorage:', sessionStorage.getItem('adminEmail'));
-                window.location.href = '/CADASTRO DE PRODUTOS/cadastroProdutos.html';
+                window.location.href = '/PUBLIC/CADASTRO DE PRODUTOS/cadastroProdutos.html';
             } else {
                 const messageContainer = document.getElementById('adminMessageContainer');
                 messageContainer.innerHTML = `<div style="color: red;">${result.error || 'Erro ao fazer login'}</div>`;

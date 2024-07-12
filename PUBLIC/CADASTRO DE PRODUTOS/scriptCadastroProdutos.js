@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log('adminEmail recuperado do sessionStorage:', adminEmail);
 
     if (!adminName || !adminEmail) {
-        window.location.href = '/CADASTRO DE PRODUTOS/cadastroProdutos.html'; // Redireciona para a página de login se as informações do administrador não estiverem disponíveis
+        window.location.href = '/PUBLIC/CADASTRO DE PRODUTOS/cadastroProdutos.html'; // Redireciona para a página de login se as informações do administrador não estiverem disponíveis
         return;
     }
 
