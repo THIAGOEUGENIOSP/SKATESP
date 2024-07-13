@@ -1,0 +1,24 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo "Building the project..."
+    # Adicione os comandos necessários para build do seu projeto, por exemplo:
+    # - npm install
+    # - npm run build
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying the project..."
+    # Adicione os comandos necessários para fazer o deploy, por exemplo:
+    # - npm install -g vercel
+    # - vercel --prod --token=$VERCEL_TOKEN
+  environment:
+    name: production
+    url: https://seu-dominio-vercel.vercel.app
+  only:
+    - main
