@@ -149,7 +149,7 @@ main{
 
 
 .imagem-principal img {
-    background: url(../img/rua_sp_skt.png) no-repeat;
+    background: url(../TELA_PRINCIPAL/img/rua_sp_skt.png) no-repeat;
     display: block;
     background-size: 100%; /* Ajusta a imagem para cobrir todo o elemento */
     /* Centraliza a imagem no elemento */
